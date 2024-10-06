@@ -1,0 +1,130 @@
+/* Global Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Ensure body takes full viewport height */
+    background-image: url('Images/space-background.jpg'); /* Path to your image */
+    background-size: cover; /* Cover the entire screen */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-attachment: fixed; /* Keep the background fixed during scroll */
+    color: #ffffff; /* Text color */
+    line-height: 1.6;
+    animation: fadeIn 1.5s ease-in;
+}
+
+header {
+    text-align: center;
+    padding: 50px 20px;
+    color: #ffffff;
+    position: relative; /* Set position to relative to allow positioning of child elements */
+    z-index: 2; /* Ensure header is above the background */
+    text-align: center;
+    padding: 50px;
+}
+
+
+h1 {
+    font-size: 3em;
+    margin: 0;
+    font-weight: 600;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+.planet-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    padding: 50px;
+}
+
+.planet {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.planet img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    filter: brightness(0.7);
+}
+
+.planet:hover img {
+    transform: scale(1.1);
+    filter: brightness(0.9);
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    text-align: center;
+    transition: background 0.3s ease;
+}
+
+.planet:hover .overlay {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.overlay h2 {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.overlay p {
+    font-size: 1em;
+    margin: 10px 0 0;
+    opacity: 0.8;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+    color: #cccccc;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header {
+        padding: 30px 10px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    .planet-list {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.Highlight{
+    background-color: black;
+    border-radius: 6px;
+    padding: 3px, 6px;
+}
